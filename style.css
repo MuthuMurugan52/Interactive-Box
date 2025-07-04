@@ -53,6 +53,7 @@
   margin-top: 1rem;
   width: 100%;
   border: 1px solid #cfcfcf;
+  position: relative;
 }
 .radio-label input[type="radio"] {
   display: none;
@@ -172,4 +173,42 @@
     color: #fff;
     padding: .5rem;
     border-radius: 5px;
+}
+
+.highlaiter {
+    position: absolute;
+    top: -7px;
+    right: 8px;
+}
+.highlaiter .text {
+    background-color: #ff6b82;
+    color: #fff;
+    padding: 3px 10px 3px 10px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    z-index: 2;
+    position: relative;
+}
+.highlaiter .left::before,
+.highlaiter .right::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.highlaiter .left::before {
+  top: -3px;
+  right: 129px;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #e74c3c transparent;
+  z-index: 1;
+}
+.highlaiter .right::after {
+  top: -3px;
+  left: 129px;
+  border-width: 10px 10px 0 10px;
+  border-color: #e74c3c transparent transparent transparent;
+  transform: rotate(180deg);
 }
